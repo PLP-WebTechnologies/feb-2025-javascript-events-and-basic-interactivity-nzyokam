@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Interactive Playground</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>🎮 Mini Interactive Playground</h1>
+
+    <!-- Event Handling -->
+    <section>
+      <h2>Event Handling</h2>
+      <button id="clickBtn">Click Me</button>
+      <button id="secretBtn">Double-click Me</button>
+      <p id="keypressOutput">Press any key!</p>
+      <p id="secretMessage" class="hidden">🎉 You found the secret!</p>
+    </section>
+
+    <!-- Interactive Elements -->
+    <section>
+      <h2>Image Gallery</h2>
+      <div class="gallery">
+        <img id="galleryImg" src="./images/1.jpg" alt="Kitten" />
+        <br />
+        <button onclick="prevImg()">Prev</button>
+        <button onclick="nextImg()">Next</button>
+      </div>
+
+      <h2>Tabs</h2>
+      <div class="tabs">
+        <button onclick="openTab('tab1')" class="active">Poem 1</button>
+        <button onclick="openTab('tab2')">Poem 2</button>
+      </div>
+      <div id="tab1" class="tab-content active">
+        <strong>Seasons</strong><br />
+        The trees let go their leaves in trust, That spring will follow
+        winter&apos;s dust. We too must shed, and softly know, That endings help
+        new gardens grow.
+      </div>
+      <div id="tab2" class="tab-content">
+        <strong>Morning Brew</strong> <br />
+        A little cup of coffee bright, Wakes the world with morning light. Steam
+        like dreams that float away, Fuel for hope to start the day.
+      </div>
+    </section>
+
+    <!-- Form Validation -->
+    <section>
+      <h2>Form Validation</h2>
+      <!-- From Uiverse.io by alexruix -->
+      <div class="form-box">
+        <form id="form" class="form">
+          <span class="title">Sign up</span>
+          <span class="subtitle">Create a free account with your email.</span>
+          <div class="form-container">
+            <input
+              id="name"
+              type="text"
+              class="input"
+              placeholder="Full Name"
+            />
+            <input id="email" type="email" class="input" placeholder="Email" />
+            <input
+              id="password"
+              type="password"
+              class="input"
+              placeholder="Password"
+            />
+          </div>
+          <button>Sign up</button>
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
